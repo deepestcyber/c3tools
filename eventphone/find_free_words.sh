@@ -2,9 +2,9 @@
 
 pattern_file=$1
 
-bs=10000;
-for i in $(seq 0 $bs $(wc -l words | cut -d " " -f 1)); do
-	head -n $(($i + $bs)) $pattern_file | tail -n $bs > tmp;
+bs=1000;
+for i in $(seq 0 $bs $(wc -l $pattern_file | cut -d " " -f 1)); do
+	head -n $(($i + $bs)) $pattern_file | tail -n $bs > tmp_$i;
 	#echo $i $(($i + $bs));
-	egrep -f tmp -i words;
+	egrep -f tmp_$i -i words
 done
