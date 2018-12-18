@@ -4,14 +4,14 @@ import json
 # curl 'https://eventphone.de/guru2/phonebook?event=34C3&format=json' > phonebook.json
 
 
-with open('phonebook.json', 'r') as f: 
-    d = json.load(f)
+with open('phonebook.json', 'r') as f:
+    d = sorted([n.strip() for n in f.readlines()])
 
 
 def find_synonym(s):
     a = {
-        0: '0', 1: '1', 2: 'ABC', 
-        3: 'DEF', 4: 'GHI', 5: 'JKL', 
+        0: '0', 1: '1', 2: 'ABC',
+        3: 'DEF', 4: 'GHI', 5: 'JKL',
         6: 'MNO', 7: 'PQRS', 8: 'TUV',
         9: 'WXYZ'
     }

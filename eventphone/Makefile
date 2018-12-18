@@ -1,5 +1,5 @@
-fetch_phonebook:
-	curl 'https://eventphone.de/guru2/phonebook?event=34C3&format=json' > phonebook.json
+fetch_phonebook: phonebook.txt
+	./fetch_phonebook.sh > phonebook.txt
 
 free_numbers: fetch_phonebook
 	python find_free_numbers.py > free_numbers
