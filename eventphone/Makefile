@@ -1,7 +1,7 @@
-fetch_phonebook: phonebook.txt
+phonebook.txt:
 	./fetch_phonebook.sh > phonebook.txt
 
-free_numbers: fetch_phonebook
+free_numbers: phonebook.txt
 	python find_free_numbers.py > free_numbers
 
 free_word_patterns: free_numbers
@@ -10,5 +10,3 @@ free_word_patterns: free_numbers
 find_free_words: free_word_patterns
 	./find_free_words free_word_patterns
 	#egrep -f free_word_patterns -i words
-
-

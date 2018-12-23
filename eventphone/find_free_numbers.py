@@ -4,7 +4,7 @@ import json
 # curl 'https://eventphone.de/guru2/phonebook?event=34C3&format=json' > phonebook.json
 
 
-with open('phonebook.json', 'r') as f:
+with open('phonebook.txt', 'r') as f:
     d = sorted([n.strip() for n in f.readlines()])
 
 
