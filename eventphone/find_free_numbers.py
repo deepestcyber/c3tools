@@ -29,7 +29,7 @@ def find_synonym(s):
 
 
 all_exts = set(range(2101, 8999))
-taken_exts = {int(n['extension']) for n in d if n['extension'].isdigit()}
+taken_exts = {int(n) for n in d}
 
 free_exts = all_exts.difference(taken_exts)
 
