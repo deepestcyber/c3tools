@@ -9,4 +9,3 @@ free_word_patterns: free_numbers
 
 find_free_words: free_word_patterns
 	./find_free_words.sh free_word_patterns
-	#egrep -f free_word_patterns -i words
