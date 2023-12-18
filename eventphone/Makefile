@@ -1,3 +1,7 @@
+.PHONY: find_free_words
+
+all: find_free_words
+
 phonebook.txt:
 	./fetch_phonebook.sh > phonebook.txt
 
