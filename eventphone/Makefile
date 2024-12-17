@@ -1,4 +1,4 @@
-.PHONY: find_free_words
+.PHONY: find_free_words clean
 
 all: find_free_words
 
@@ -13,3 +13,7 @@ free_word_patterns: free_numbers
 
 find_free_words: free_word_patterns
 	./find_free_words.sh free_word_patterns
+
+clean:
+	-rm phonebook.txt
+	-rm free_numbers
